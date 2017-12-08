@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <meta charset="UTF-8">
+  <title>Local Storage and Cats</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Local Cats</h1>
+    <h2>The click count is:
+      <span id="numdisplay">0</span>
+    </h2>
+    <div class="row">
+      <img class="col s12 m6" src="https://i.pinimg.com/736x/35/8c/57/358c57c204a2fec21fa50b917a0728aa--rainbow-face-rainbow-prism.jpg"
+        id="cat">
+    </div>
+    <h3>Instructions</h3>
+    <ol>
+      <li>Add Materialize CSS</li>
+      <li>Add a cat picture.</li>
+      <li>Add Event listener</li>
+      <li>Display the number of times the cat has been clicked</li>
+      <li>Use local storage to keep track of clicks on refresh</li>
+    </ol>
+
+    <h3>Bonus:</h3>
+    <ol>
+      <li>If it's someone's first visit, ask for the user's name.</li>
+      <li>Display greeting somewhere with the user's name.</li>
+      <li>When the page is refreshed, the name should still be displayed</li>
+    </ol>
+  </div>
+  <script>
+    var numofclicks = 0
+    document.getElementById("cat").addEventListener("click", function () {
+      numofclicks++
+      document.getElementById("numdisplay").innerHTML = numofclicks
+    })
+  </script>
+</body>
+
+</html>
